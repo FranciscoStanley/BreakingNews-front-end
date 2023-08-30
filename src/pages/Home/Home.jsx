@@ -23,18 +23,14 @@ export function Home() {
     <>
       <Navbar />
       <HomeHeader>
-        {topNews.map((item) => {
-          return (
-            <Card
-              key={item._id}
-              title={item.title}
-              text={item.text}
-              banner={item.banner}
-              likes={item.likes.length}
-              comments={item.comments.length}
-            />
-          );
-        })}
+        <Card
+          top={true}
+          title={topNews.title}
+          text={topNews.text}
+          banner={topNews.banner}
+          likes={topNews.likes}
+          comments={topNews.comments}
+        />
       </HomeHeader>
       <HomeBody>
         {news.map((item) => {
@@ -44,8 +40,8 @@ export function Home() {
               title={item.title}
               text={item.text}
               banner={item.banner}
-              likes={item.likes.length}
-              comments={item.comments.length}
+              likes={item.likes}
+              comments={item.comments}
             />
           );
         })}

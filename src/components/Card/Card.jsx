@@ -6,7 +6,7 @@ export function Card(props) {
   return (
     <>
       <CardContainer>
-        <CardBody>
+        <CardBody top={props.top}>
           <div>
             <CardHeader>
               <h2>{props.title}</h2>
@@ -19,12 +19,12 @@ export function Card(props) {
         <CardFooter>
           <section>
             <i className="bi bi-hand-thumbs-up"></i>
-            <span>{props.likes}</span>
+            <span>{props.likes?.length}</span>
           </section>
 
           <section>
             <i className="bi bi-chat"></i>
-            <span>{props.comments}</span>
+            <span>{props.comments?.length}</span>
           </section>
         </CardFooter>
       </CardContainer>
