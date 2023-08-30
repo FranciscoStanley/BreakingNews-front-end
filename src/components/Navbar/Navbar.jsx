@@ -1,19 +1,19 @@
 import React from "react";
 import logo from "../../images/Logo.png";
+import { Nav, ImageLogo, InputSpace } from "./NavbarStyled";
 
-import "./Navbar.css";
-
-export default function Navbar() {
+export function Navbar() {
   return (
     <>
-      <nav>
-        <div className="input-search-space">
+      <Nav>
+        <InputSpace>
           <i className="bi bi-search"></i>
           <input type="text" placeholder="Pesquise por um título" />
-        </div>
-        <img src={logo} alt="Logo Breaking News" />
+        </InputSpace>
+        <ImageLogo src={logo} alt="Logo Breaking News" />
+        {/* <Button>Entrar</Button> */}
         <button>Entrar</button>
-      </nav>
+      </Nav>
     </>
   );
 }
