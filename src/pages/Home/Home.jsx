@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { Card } from "../../components/Card/Card";
-import { HomeBody } from "./HomeStyled";
+import { HomeBody, HomeHeader } from "./HomeStyled";
 import { getAllNews, getTopNews } from "../../services/newsServices";
 export function Home() {
   const [news, setNews] = useState([]);
@@ -22,6 +22,20 @@ export function Home() {
   return (
     <>
       <Navbar />
+      <HomeHeader>
+        {topNews.map((item) => {
+          return (
+            <Card
+              key={item._id}
+              title={item.title}
+              text={item.text}
+              banner={item.banner}
+              likes={item.likes.length}
+              comments={item.comments.length}
+            />
+          );
+        })}
+      </HomeHeader>
       <HomeBody>
         {news.map((item) => {
           return (
