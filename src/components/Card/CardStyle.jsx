@@ -25,10 +25,10 @@ export const CardBody = styled.article`
   }
 
   img {
-    width: 30%;
+    width: 35%;
     object-fit: cover;
     object-position: center;
-    border-radius: 0 0.3rem 0.3rem 0;
+    border-radius: 0 0.5rem 0.3rem 0;
   }
 `;
 

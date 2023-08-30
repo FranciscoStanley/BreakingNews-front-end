@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:8080";
+const baseUrl = "https://api-news-8gw4.onrender.com";
 
 export function getAllNews() {
   const response = axios.get(`${baseUrl}/news/posts`);
